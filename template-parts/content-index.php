@@ -18,7 +18,10 @@
             </div><!--.search-bar-->
             <div class="overlay">
                 <div class="row-1">
-                    <h1><img src="<?php echo get_template_directory_uri()."/images/logo2.png";?>" alt="<?php echo get_bloginfo("name");?>"></h1>
+                    <h1>
+                        <a href="<?php bloginfo('url'); ?>/home">
+                        <img src="<?php echo get_template_directory_uri()."/images/logo2.png";?>" alt="<?php echo get_bloginfo("name");?>"></a>
+                    </h1>
                 </div>
                 <div class="row-2">
                     <div class="new">
@@ -33,7 +36,7 @@
                     <div class="week">
                         <?php $post = get_post(258);
                         setup_postdata($post);?>
-                        <a href="<?php echo get_the_permalink();?>">
+                        <a href="<?php bloginfo('url');?>">
                             <div class="js-at-word"><?php the_title();?></div>
                         </a>
                         <?php $post = get_post(16);

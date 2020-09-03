@@ -24,14 +24,15 @@ get_header("landing"); ?>
 						Blue Sub Navff
 
 				    */
+					$tt=0;
 					if($sections):?>
 				    	<div class="row-1">
 				            <div class="wrapper sub-menu">
 				                <ul id="sub-menu">
-					                <?php if($top_section_title):?>
+					                <!-- <?php if($top_section_title):?>
 				                        <li><a href="#<?php echo sanitize_title_with_dashes($top_section_title);?>"><?php echo $top_section_title;?></a></li>
-					                <?php endif;?>
-				                    <?php foreach($sections as $section):
+					                <?php endif;?> -->
+				                    <?php foreach($sections as $section): $tt++;
 				                        if($section['menu_title']):?>
 				                            <li>
 				                                <a href="#<?php echo sanitize_title_with_dashes($section['menu_title']);?>">
@@ -73,7 +74,7 @@ get_header("landing"); ?>
 						<?php endif;?>
 				        <div class="column-1 copy">
 							<?php if($top_section_content):?>
-								<?php echo $top_section_content?>
+								<div class="biggertext"><?php echo $top_section_content?></div>
 							<?php endif;?>
 
 
@@ -104,7 +105,7 @@ get_header("landing"); ?>
 					                		$button_link = get_sub_field('button_link');
 					                		?>
 					                    <div class="more-btn">
-					                        <a href="<?php echo $butn[button_text];?>" target="_blank">
+					                        <a href="<?php echo $butn['button_link'];?>" target="_blank">
 					                            <?php if($butn['button_text']) echo $butn['button_text']; else echo $more_button_text;?>
 					                        </a>
 					                    </div><!--.more-->

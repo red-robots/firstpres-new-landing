@@ -44,9 +44,10 @@
                 <div class="week">
 	                <?php $post = get_post(258);
 	                setup_postdata($post);?>
-                    <a href="<?php echo get_the_permalink();?>">
-		                <div class="js-at-word"><?php the_title();?></div>
-                    </a>
+                    <!-- <a href="<?php echo get_the_permalink();?>"> -->
+                    	<a href="<?php bloginfo('url');?>">
+			                <div class="js-at-word"><?php the_title();?></div>
+	                    </a>
 	                <?php wp_reset_postdata();?>
                 </div><!--.week-->
 				<div class="search-bar clear-bottom">
@@ -59,11 +60,11 @@
             </div><!--.row-1-->
 			<?php if(is_home()): ?>
 	            <h1 class="logo row-2">
-	            <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo1.png";?>" alt="<?php bloginfo('name'); ?>"></a>
+	            <a href="<?php bloginfo('url'); ?>/home"><img src="<?php echo get_template_directory_uri()."/images/logo1.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 	            </h1>
 	        <?php else: ?>
 	            <div class="logo row-2">
-	            <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo1.png";?>" alt="<?php bloginfo('name'); ?>"></a>
+	            <a href="<?php bloginfo('url'); ?>/home"><img src="<?php echo get_template_directory_uri()."/images/logo1.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 	            </div><!--.logo .row-2-->
 	        <?php endif; ?>
 
