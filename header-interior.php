@@ -22,6 +22,19 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	<?php 
+$alert=get_field('alert_message', 'option');
+$showAlert=get_field('show_alert_message', 'option');
+if($showAlert){$showAlert=$showAlert[0];}
+
+// echo '<pre>';
+// print_r($alert);
+// echo '</pre>';
+if($showAlert=='Yes' && $alert !='' ) : ?>
+	<div class="alert">
+		<?php echo $alert; ?>
+	</div>
+<?php endif; ?>
     <div id="hamburger">
         <div class="wrapper">
             <i class="fa fa-bars"></i>
